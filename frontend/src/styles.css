@@ -1,0 +1,25 @@
+:root {
+  --max-width: 900px;
+}
+body { font-family: Arial, Helvetica, sans-serif; padding: 20px; }
+.container { max-width: var(--max-width); margin: 0 auto; }
+.form-row { margin-bottom: 12px; display:flex; flex-direction:column; }
+.form-row label { font-weight:600; margin-bottom:6px; }
+.form-row input, .form-row textarea { padding:8px; font-size:14px; }
+.actions { margin-top:12px }
+.btn { padding:8px 12px; margin-right:8px; cursor:pointer; }
+.btn.primary { background:#007bff; color:#fff; border:none; }
+
+/* simple modal */
+.modal { position:fixed; left:0; right:0; top:0; bottom:0; background:rgba(0,0,0,0.5); display:flex; align-items:center; justify-content:center; z-index:9999; }
+.modal-content { background:#fff; max-width:900px; width:95%; max-height:90vh; overflow:auto; padding:16px; position:relative; border-radius:4px; }
+.modal-close { position:absolute; right:8px; top:6px; font-size:20px; border:none; background:transparent; cursor:pointer; }
+.modal-body { margin-top:10px; }
+.modal-toolbar { display:flex; gap:8px; margin-bottom:8px; }
+.modal-toolbar .btn { padding:6px 10px; }
+.summernote { min-height: 160px; }
+.modal-body .summernote { min-height: 280px; }
+
+/* Hide summernote help dialog */
+.note-help-dialog { display: none !important; }
+.modal.note-modal { display: none !important; }
