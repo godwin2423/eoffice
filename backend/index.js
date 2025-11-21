@@ -26,6 +26,12 @@ app.post('/api/generate', (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`Circular backend listening on http://localhost:${PORT}`);
-});
+// When running locally we start the server. In serverless (Vercel) we export the app.
+if (process.env.NODE_ENV === 'development' || process.env.LOCAL_RUN === 'true') {
+  app.listen(PORT, () => {
+    console.log(`Circular backend listening on http://localhost:${PORT}`);
+  });
+} else {
+  // Export the Express app for serverless platforms (Vercel expects a handler export)
+  module.exports = app;
+}
