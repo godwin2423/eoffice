@@ -6,6 +6,12 @@ export default defineConfig({
   optimizeDeps: {
     include: ['jquery', 'bootstrap', 'popper.js', 'summernote']
   },
+  resolve: {
+    alias: {
+      jQuery: 'jquery',
+      jquery: 'jquery'
+    }
+  },
   define: {
     'window.jQuery': 'jquery',
     'window.$': 'jquery'
