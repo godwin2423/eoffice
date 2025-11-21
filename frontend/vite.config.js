@@ -4,12 +4,12 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   optimizeDeps: {
-    include: ['jquery', 'bootstrap', 'popper.js', 'summernote']
+    include: ['jquery', 'popper.js', 'bootstrap', 'summernote']
   },
   resolve: {
     alias: {
-      jQuery: 'jquery',
-      jquery: 'jquery'
+      jquery: 'jquery',
+      jQuery: 'jquery'
     }
   },
   define: {
